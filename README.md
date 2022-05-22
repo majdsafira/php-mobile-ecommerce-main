@@ -1,1 +1,2 @@
-# php-mobile-ecommerce-main
+# php-mobile-ecommerce
+php-mobile-ecommerce
