@@ -49,15 +49,15 @@ $products = $statment->fetchAll(PDO::FETCH_ASSOC);
       <?php foreach($products as $i => $product): ?>
       <div class="col">
         <div class="card">
-          <img src="<?php echo $product['product_m_img']; ?>" class="card-img-top" style="width: 150px; height: 150px; display: block; margin-left: auto; margin-right: auto;">
+          <img src="./images/<?php echo $product['product_m_img']; ?>" class="card-img-top" style="width: 150px; height: 150px; display: block; margin-left: auto; margin-right: auto;">
           <div class="card-body">
             <h5 class="card-title"><?php echo $product['product_name']?></h5>
             <h6 class="card-title"><?php echo $product['product_price']?></h6>
-            <h6 class="card-title"><?php $stat='SELECT * FROM categories';
+            <h6 class="card-title"><?php $stat='SELECT * FROM categories JOIN products ON categories.category_id = products.category_id' ;
                                                 $cat=$pdo->query($stat);
-                                                $share=$cat->fetchAll();
-                                                $share_name = $share[0] ['category_name'];
-                                                echo $share_name;?></h6>
+                                                $share=$cat->fetchAll(PDO::FETCH_ASSOC);
+                                                $share_name = $share[0]['category_name'];
+                                                print_r($share[$i]['category_name']);?></h6>
             <p class="card-text"><?php echo $product['product_description']?></p>
 
             <form style="display: inline-block" method="post" action="./delete.php">

@@ -9,8 +9,10 @@ $stat='SELECT * FROM categories';
       $share=$cat->fetchAll(PDO::FETCH_ASSOC);
       $share_id = $share[0]['category_id'];
       //echo '<pre>';
-      //var_dump($share);
+      //var_dump($_POST);
       //echo '<pre>';
+
+
 if($_SERVER['REQUEST_METHOD']=='POST'){
   if (!is_dir('images')) {
     mkdir('images');
@@ -18,15 +20,16 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $product_name = $_POST['product_name'];
     $product_description = $_POST['product_description'];
     $product_price = $_POST['product_price'];
+    $product_color = $_POST['color'];
     
 
 
     $image = $_FILES['image'] ?? null;
     $imagePath = '';
     if ($image) {
-        $imagePath = 'images/' . randomString(8) . $image['name'];
+        $imagePath = 'IMG-' . randomString(8) . $image['name'];
         
-        move_uploaded_file($image['tmp_name'], $imagePath);
+        move_uploaded_file($image['tmp_name'], "images/" . $imagePath);
     }
     
 
@@ -36,7 +39,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $statment->bindValue(':product_description', $product_description);
     $statment->bindValue(':image', $imagePath);
     $statment->bindValue(':product_price', $product_price);
-    $statment->bindValue(':category_id', $share_id);
+   
+    $statment->bindValue(':category_id', $_POST['categories']);
     
     $statment->execute();
     header("location: index.php");
@@ -93,6 +97,7 @@ function randomString($n)
         <label>Price</label>
         <input type="text" class="form-control" name="product_price">
       </div>
+      
       <div class="form-group">
         <label>Priduct Image</label>
         <input type="file" class="form-control" name="image">
