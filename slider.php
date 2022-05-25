@@ -25,9 +25,7 @@
         <div class="carousel-item">
           <img src="./image/camon18pre-sa-pc.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"  role="img" aria-label="Placeholder: First slide">
         </div>
-        <div class="carousel-item ">
-          <img src="./image/kf6k-1980x900.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"  role="img" aria-label="Placeholder: First slide">
-        </div>
+        
         <div class="carousel-item">
           <img src="./image/pova3--pc.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"  role="img" aria-label="Placeholder: First slide">
         </div>

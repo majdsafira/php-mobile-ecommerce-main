@@ -14,26 +14,7 @@
    header("Location: index.php");
  }
  
- // For Comments
- // if (isset($_GET['comment'])) {
- //   if (isset($_SESSION['userLogin'])) {
- //       $user_id = $_SESSION['userLogin'];
- //       $prodcut_id = $_GET['id'];
- //       $comment_content = $_GET['message'];
- //     $sqlInserComment = "INSERT INTO comments (user_id,prodcut_id,comment_content,comment_date) 
- //     VALUES ($user_id,$prodcut_id,'$comment_content',NOW())";
- //     $stmt = $pdo->query($sqlInserComment);
- //     // $stmt->execute([$user_id,$prodcut_id,$comment_content]);
- 
-     
- //     $id = $_GET['id'];
- //     header("location: single-product.php?id={$id}");
- //   } else {
- //     echo "<script>alert('You must be logged in')</script>";
- //   }
- // }
- 
- // For Add To Cart
+
  if (isset($_GET["action"]) && $_GET["action"] == "add_to_cart") {
  
    $userCart_id = $_GET['ucid'];
@@ -81,6 +62,7 @@
    <link rel="stylesheet" href="./css/bootstraps.css" />
    <link rel="stylesheet" href="./css/font-awesome.mins.css" />
    <link rel="stylesheet" href="./css/themify-iconss.css" />
+   <link rel="stylesheet" href="./css/styless.css">
    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
    <!-- main css -->
    <link rel="stylesheet" href="./css/styless.css" />
@@ -169,6 +151,20 @@
      width: 85px;
      height: 40px;
    } */
+
+   .banner_area .banner_inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100px;
+    background: #f6f6f6;
+    z-index: 1;
+}
+.banner_area {
+    position: relative;
+    z-index: 1;
+    min-height: 100px;
+}
    </style>
  
  </head>

@@ -166,7 +166,7 @@ if (isset($_SESSION['refresh']) && $_SESSION['refresh'] == true) {
     <div class="row justify-content-center">
       <div class="offset-lg-4 col-lg-6 text-center">
         <div class="offer_content">
-          <h3 class="text-uppercase mb-40 text-light">All Mobile’s Accessories</h3>
+          <h3 class="text-uppercase mb-40 text-light">All Mobile’s Accessories </h3>
           <h2 class="text-uppercase text-light">20% off</h2>
           <div class="container" style = " text-align: center ">
   <button type="button" class="btn " data-toggle="modal" data-target="#discountModal"  style = " background-color: #707bfb; color :white;">
@@ -261,7 +261,6 @@ if (isset($_SESSION['refresh']) && $_SESSION['refresh'] == true) {
   </div>
 </section>
 <!--================ End Feature Product Area =================-->
-
 
 
 <!--================ start footer Area  =================-->

@@ -5,6 +5,8 @@ include_once('../../headfoot/header.php');
 
 
 
+
+
 $statment = $pdo->prepare("SELECT * FROM `users`");
 $statment->execute();
 $users = $statment->fetchAll(PDO::FETCH_ASSOC);
@@ -47,7 +49,7 @@ $users = $statment->fetchAll(PDO::FETCH_ASSOC);
       <?php foreach($users as $i => $user): ?>
       <div class="col">
         <div class="card">
-          <img src="<?php echo $user['user_img']; ?>" class="card-img-top" style="width: 150px; height: 150px; display: block; margin-left: auto; margin-right: auto;">
+          <img src="./images/<?php echo $user['user_img']; ?>" class="card-img-top" style="width: 150px; height: 150px; display: block; margin-left: auto; margin-right: auto;">
           <div class="card-body">
             <h5 class="card-title"><?php echo $user['user_name']?></h5>
             <h6 class="card-title"><?php echo $user['user_email']?></h6>
@@ -82,6 +84,8 @@ $users = $statment->fetchAll(PDO::FETCH_ASSOC);
 </body>
 
 </html>
+
+
 
 
 

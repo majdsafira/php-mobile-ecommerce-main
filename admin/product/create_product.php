@@ -90,7 +90,7 @@ function randomString($n)
       <h3>Add Product</h3>
       <div class="form-group">
         <label>Product Name</label>
-        <input type="text" class="form-control" name="product_name">
+        <input type="text" class="form-control" name="product_name" required>
       </div>
       <div class="form-group">
         <label>Product Discription</label>
@@ -98,16 +98,16 @@ function randomString($n)
       </div>
       <div class="form-group">
         <label>Price</label>
-        <input type="text" class="form-control" name="product_price">
+        <input type="text" class="form-control" name="product_price" required>
       </div>
       
       <div class="form-group">
         <label>Priduct Image</label>
-        <input type="file" class="form-control" name="image">
+        <input type="file" class="form-control" name="image" required>
       </div>
       <div class="form-group">
         <label class="form-label">Categories</label>
-        <select class="form-select" aria-label="Default select example" name="categories">
+        <select class="form-select" aria-label="Default select example" name="categories"> 
           <option selected>Open this select menu</option>
           <?php foreach ($share as $value):?>
           <option value="<?php echo $value['category_id'] ?>"><?php echo $value['category_name'] ?></option>

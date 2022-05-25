@@ -4,7 +4,7 @@
 require_once("./header.php");
 ?>
 <?php 
-   if (isset($_GET['comment'])) {
+  if (isset($_GET['comment'])) {
     if (isset($_SESSION['userLogin'])) {
         $user_id = $_GET['uid'];
         $prodcut_id = $_GET['pid'];

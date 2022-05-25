@@ -49,35 +49,12 @@
               style="width: 60px; background-color: #7c4dff; height: 2px"
               />
           <p>
-            Here you can use rows and columns to organize your footer
-            content. Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit.
+          Smart gives you a chance to quickly and easily find the device you want and have it delivered to your home in no time, regardless of your location.
           </p>
         </div>
         <!-- Grid column -->
 
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold">Products</h6>
-          <hr
-              class="mb-4 mt-0 d-inline-block mx-auto"
-              style="width: 60px; background-color: #7c4dff; height: 2px"
-              />
-          <p>
-            <a href="#!" class="text-white" style="text-decoration:none;">MDBootstrap</a>
-          </p>
-          <p>
-            <a href="#!" class="text-white" style="text-decoration:none;">MDWordPress</a>
-          </p>
-          <p>
-            <a href="#!" class="text-white" style="text-decoration:none;">BrandFlow</a>
-          </p>
-          <p>
-            <a href="#!" class="text-white" style="text-decoration:none;">Bootstrap Angular</a>
-          </p>
-        </div>
-        <!-- Grid column -->
+        
 
         <!-- Grid column -->
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -88,16 +65,11 @@
               style="width: 60px; background-color: #7c4dff; height: 2px"
               />
           <p>
-            <a href="#!" class="text-white" style="text-decoration:none;">Your Account</a>
+            <a href="http://localhost/php-mobile-ecommerce-main/profile.php" class="text-white" style="text-decoration:none;">Your Account</a>
           </p>
+        
           <p>
-            <a href="#!" class="text-white" style="text-decoration:none;">Become an Affiliate</a>
-          </p>
-          <p>
-            <a href="#!" class="text-white" style="text-decoration:none;">Shipping Rates</a>
-          </p>
-          <p>
-            <a href="#!" class="text-white" style="text-decoration:none;">Help</a>
+            <a href="http://localhost/php-mobile-ecommerce-main/about.php" class="text-white" style="text-decoration:none;">About US</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -111,9 +83,9 @@
               style="width: 60px; background-color: #7c4dff; height: 2px"
               />
           <p><i class="fa fa-home mr-3"></i> IRBID, JORDAN</p>
-          <p><i class="fa fa-envelope mr-3"></i> info@example.com</p>
-          <p><i class="fa fa-phone mr-3"></i> +962790640416</p>
-          <p><i class="fa fa-print mr-3"></i> +962790640416</p>
+          <p><i class="fa fa-envelope mr-3"></i> majdsafira@gmail.com</p>
+          <p><i class="fa fa-phone mr-3"></i> +962789666494</p>
+          
         </div>
         <!-- Grid column -->
       </div>
@@ -127,7 +99,7 @@
        class="text-center p-3"
        style="background-color: rgba(0, 0, 0, 0.2)"
        >
-    2022 Copyright © YOUSEF
+    2022 Copyright © Majd Safira
   </div>
   <!-- Copyright -->
 </footer>

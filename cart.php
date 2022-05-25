@@ -2,14 +2,15 @@
 ?>
 
 <?php 
+
 try {
   if (isset($_SESSION['userLogin']) ){
-    $stat = $pdo->prepare ("SELECT * FROM users_cart WHERE 	user_id =?;");
+  $stat = $pdo->prepare ("SELECT * FROM users_cart WHERE 	user_id =?;");
 $stat->execute([$_SESSION['userLogin']]);
 $cart = $stat->fetchAll();
 $coun = $stat->rowCount();
 if ($coun === 0 ){
-  echo '    <div class="container  mt-100">
+  echo '    <div class="container-fluid  mt-100">
   <div class="row">
       <div class="col-md-12">
           <div class="card">
@@ -21,7 +22,7 @@ if ($coun === 0 ){
                       <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" class="img-fluid mb-4 mr-3">
                       <h3><strong>Your Cart is Empty</strong></h3>
                       <h4>Add something to make me happy :)</h4>
-                      <a href="#" class="btn btn-primary cart-btn-transform m-3" data-abc="true" style="background-color: #717ce8;">continue shopping</a>
+                      <a href="category.php" class="btn btn-primary cart-btn-transform m-3" data-abc="true" style="background-color: #717ce8;">continue shopping</a>
                   </div>
               </div>
           </div>
@@ -29,9 +30,6 @@ if ($coun === 0 ){
   </div>
 </div>';
 }else {
-
-
-  
 ?>
 <div class= "container" >
 <div class="card-header">
@@ -39,7 +37,7 @@ if ($coun === 0 ){
   <table class="table">
   <thead>
     <tr>
-    <th scope="col"></th>
+    <th scope="col">Action</th>
     <th scope="col">Image</th>
     <th scope="col">Item Name</th>
     <th scope="col">Quantity</th>
@@ -58,11 +56,11 @@ foreach ($cart  as $value) :
 <td>
 <form action ="#"  method="post" style=" color: #f4b7b4;">
 <input type="hidden"  name="ID" value ="<?php echo $value['product_id']; ?>">
-<button type="submit" name ="delete" style="background-color: #f8f9fa; border : none;" ><i class='far fa-times-circle' style='font-size:24px ; padding-top : 40px; color:red;'></i></button>
+<button type="submit" name ="delete" style="background-color: #f8f9fa; border : none;" ><i style='font-size:20px ;color:red;margin-top:20px;' class='far'>&#xf2ed;</i></button>
 </form></td>
 <td  ><img src = "./admin/product/images/<?php echo $value['Product_image']; ?>" width = "90px"></td>
 <td style='padding-top : 50px;'><?php echo $value['Product_name']; ?></td> 
-<td  style='padding-top : 50px;'><form action ="#"  method="post" style=" color: #f4b7b4;"><input type="hidden"  name="ID" value ="<?php echo $value['product_id']; ?>"><input type="number" name="q" min ="1" style=" width: 50px" value="<?php echo $value['quantity'];
+<td  style='padding-top : 50px;'><form action ="#"  method="post" style=" color: #f4b7b4;"><input type="hidden"  name="ID" value ="<?php echo $value['product_id']; ?>"><input type="number" name="q" style=" width: 50px" value="<?php echo $value['quantity'];
 $Qu+=$value['quantity'];?>">  <input type="submit" class="btn btn-primary" name="Update" value="Update Cart" style="background-color:  #717ce8;  color: white; border: none; "></td> 
 <td  style='padding-top : 50px;'><input type ='hidden' name ="priceid" value ="<?php   $sub_price =$value['quantity'] * $value['sub_total'] ; echo $sub_price ?>" > 
 <label><?php $totel += $sub_price ; 
@@ -78,7 +76,7 @@ endforeach ;
 <form action ="#"  method="post" style=" color: #f4b7b4;">
 <input type="text" name="copone" style="  height: 30px" placeholder="Coupon code">
 <input type="submit" class="btn btn-primary" name="couponbtn" value="Applay coupon" style="background-color: #717ce8;  color: white; border: none;">
-<!-- <input type="submit" class="btn btn-primary" name="Update" value="Update Cart" style="background-color:  #717ce8;  color: white; border: none; "> -->
+
 </form>
 </td>
 </tr>
@@ -86,7 +84,7 @@ endforeach ;
 <td > <h3> Cart Totals </h3></td></tr>
 <tr >
 <td colspan="2">
-<h5> Total : <?php echo $totel . '$'; ?>
+<h5> Total : <?php echo $totel . ' JOD'; ?>
 </h5>
 </td>
 </tr>
@@ -95,7 +93,7 @@ endforeach ;
 <h5> Coupon : <?php if(isset($_POST['couponbtn'])){
     $copone_name =$_POST['copone'];
     if ($copone_name === "smart100"){
-      echo  'smart100 -'. ( $totel *20/ 100) . '$ from total price';
+      echo  'smart100 (-'. ( $totel *20/ 100) . ' JOD) from total price';
     }else {
       echo $totel  . '$ invalid coupon';
     }
@@ -110,9 +108,9 @@ endforeach ;
     $copone_name =$_POST['copone'];
     if ($copone_name === "smart100"){
       $totel = $totel - ( $totel * 20/ 100) ;
-      echo $totel.'$';
+      echo $totel.' JOD';
     }else {
-      echo $totel  . '$ invalid coupon';
+      echo $totel  . ' JOD invalid coupon';
     }
     
     } ?></h5>
@@ -172,5 +170,6 @@ catch (PDOException $e){
   echo "Faild"  . $e->getMessage() . "<br/>";
  
 }?>
+
 <?php require './footer.php';
 ?>
