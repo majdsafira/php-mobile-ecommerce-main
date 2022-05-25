@@ -103,6 +103,7 @@ function randomString($n) {
   <section style="margin-left: 4%;">
 
     <form method="post" style="margin-left: 2%; margin-right: 2%" enctype="multipart/form-data">
+    <h3>Edit users</h3>
 
     <?php if ($users[0]['user_img']): ?>
           <img src="<?php echo $users[0]['user_img']; ?>" style="width: 150px; height: 150px; display: block;">

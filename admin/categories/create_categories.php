@@ -68,6 +68,8 @@ function randomString($n)
   <section style="margin-left: 4%;">
 
     <form method="post" style="margin-left: 2%; margin-right: 2%" enctype="multipart/form-data">
+      <h3>Add categories</h3>
+
       <div class="form-group">
         <label>category Name</label>
         <input type="text" class="form-control" name="category_name">

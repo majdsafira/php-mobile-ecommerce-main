@@ -58,7 +58,7 @@ $products = $statment->fetchAll(PDO::FETCH_ASSOC);
                                                 $share=$cat->fetchAll(PDO::FETCH_ASSOC);
                                                 $share_name = $share[0]['category_name'];
                                                 print_r($share[$i]['category_name']);?></h6>
-            <p class="card-text"><?php echo $product['product_description']?></p>
+            <p class="card-text"><?php echo SUBSTR($product['product_description'], 0, 20)?></p>
 
             <form style="display: inline-block" method="post" action="./delete.php">
               <input type="hidden" name="id" value="<?php echo $product['product_id']; ?>">

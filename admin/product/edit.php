@@ -114,9 +114,10 @@ function randomString($n) {
 
 <body>
   <section style="margin-left: 4%;">
+    
 
     <form method="post" action ="#" style="margin-left: 2%; margin-right: 2%" enctype="multipart/form-data">
-
+      <h3>Edit Product</h3>
       <?php if ($products[0]['product_m_img']): ?>
           <img src="./images/<?php echo $products[0]['product_m_img']; ?>" style="width: 150px; height: 150px; display: block;">
       <?php endif ?>

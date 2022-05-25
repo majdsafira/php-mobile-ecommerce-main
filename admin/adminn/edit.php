@@ -63,6 +63,7 @@ $admins = $statment->fetchAll(PDO::FETCH_ASSOC);
     <section style="margin-left: 4%;">
 
         <form method="post" style="margin-left: 2%; margin-right: 2%" enctype="multipart/form-data">
+        <h3>Edit admin</h3>
 
         <div class="form-group">
             <label>admin name</label>

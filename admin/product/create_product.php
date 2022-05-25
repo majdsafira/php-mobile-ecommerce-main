@@ -20,7 +20,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $product_name = $_POST['product_name'];
     $product_description = $_POST['product_description'];
     $product_price = $_POST['product_price'];
-    $product_color = $_POST['color'];
     
 
 
@@ -35,11 +34,13 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
     $statment = $pdo->prepare("INSERT INTO `products` (`product_name`, `product_description`, `product_m_img`, `product_price`, `category_id`)
                 VALUES (:product_name, :product_description, :image, :product_price, :category_id)");
-    $statment->bindValue(':product_name', $product_name);
-    $statment->bindValue(':product_description', $product_description);
-    $statment->bindValue(':image', $imagePath);
-    $statment->bindValue(':product_price', $product_price);
-   
+     $statment->bindValue(':product_name', $product_name);
+     $statment->bindValue(':product_description', $product_description);
+     $statment->bindValue(':image', $imagePath);
+     $statment->bindValue(':product_price', $product_price);
+      
+
+
     $statment->bindValue(':category_id', $_POST['categories']);
     
     $statment->execute();
@@ -83,8 +84,10 @@ function randomString($n)
 
 <body>
   <section style="margin-left: 4%;">
+    
 
     <form method="post" style="margin-left: 2%; margin-right: 2%" enctype="multipart/form-data">
+      <h3>Add Product</h3>
       <div class="form-group">
         <label>Product Name</label>
         <input type="text" class="form-control" name="product_name">

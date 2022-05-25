@@ -44,7 +44,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
   <section style="margin-left: 4%;">
 
     <form method="post" style="margin-left: 2%; margin-right: 2%" enctype="multipart/form-data">
-      
+    <h3>Add admin</h3>
+
       <div class="form-group">
         <label>admin name</label>
         <input type="text" class="form-control" name="admin_name">

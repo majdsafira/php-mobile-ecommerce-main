@@ -89,6 +89,7 @@ function randomString($n) {
     <section style="margin-left: 4%;">
 
         <form method="post" style="margin-left: 2%; margin-right: 2%" enctype="multipart/form-data">
+        <h3>Edit categories</h3>
 
             <?php if ($categories[0]['category_img']): ?>
             <img src="./images/<?php echo $categories[0]['category_img']; ?>" style="width: 150px; height: 150px; display: block;">

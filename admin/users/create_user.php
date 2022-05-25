@@ -77,7 +77,8 @@ function randomString($n)
   <section style="margin-left: 4%;">
 
     <form method="post" style="margin-left: 2%; margin-right: 2%" enctype="multipart/form-data">
-      
+    <h3>Add users</h3>
+
       <div class="form-group">
         <label>user Image</label>
         <input type="file" class="form-control" name="user_img">
