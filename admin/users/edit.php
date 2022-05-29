@@ -106,7 +106,7 @@ function randomString($n) {
     <h3>Edit users</h3>
 
     <?php if ($users[0]['user_img']): ?>
-          <img src="<?php echo $users[0]['user_img']; ?>" style="width: 150px; height: 150px; display: block;">
+          <img src="./images/<?php echo $users[0]['user_img']; ?>" style="width: 150px; height: 150px; display: block;">
       <?php endif ?>
       <div class="form-group">
         <label>user Image</label>

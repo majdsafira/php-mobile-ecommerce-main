@@ -28,8 +28,8 @@ include_once ('../headfoot/header.php');
                 <img src="https://thumbs.dreamstime.com/b/admin-seal-print-corroded-texture-red-vector-rubber-text-unclean-title-placed-double-parallel-lines-scratched-122073406.jpg" class="card-img-top" style = "height: 200px;">
                 <div class="card-body">
                     <h5 class="card-title">Admin</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to</p>
-                    <a href="./adminn/index.php" class="btn btn-success">Edit Product</a>
+                    <p class="card-text">Here you can show all of Admin in your website.</p>
+                    <a href="./adminn/index.php" class="btn btn-success">Edit Admin</a>
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@ include_once ('../headfoot/header.php');
                 <img src="https://rietveld-ict.nl/wp-content/uploads/2014/01/users.png" class="card-img-top" style = "height: 200px;">
                 <div class="card-body">
                     <h5 class="card-title">Users</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to</p>
+                    <p class="card-text">Here you can show all of Users in your website.</p>
                     <a href="./users/index.php" class="btn btn-success">Edit Users</a>
                 </div>
             </div>
@@ -48,8 +48,8 @@ include_once ('../headfoot/header.php');
                 <img src="https://www.anandnair.com/.a/6a00d8341cbcd853ef0240a484b39f200d-600wi" class="card-img-top" style = "height: 200px;">
                 <div class="card-body">
                     <h5 class="card-title">Category</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to.</p>
-                    <a href="./categories/index.php" class="btn btn-success">Edit Product</a>
+                    <p class="card-text">This page to add & delete & edit Category.</p>
+                    <a href="./categories/index.php" class="btn btn-success">Edit Category</a>
                 </div>
             </div>
         </div>
@@ -58,9 +58,18 @@ include_once ('../headfoot/header.php');
                 <img src="https://realbusiness.co.uk/wp-content/uploads/2015/02/media.caspianmedia.comimage97dd9a06edb37bc5c3ab75d27e1398b2-6350489d6aba5170ffba3c6780c7c7db9f8a94bc.jpg" class="card-img-top" style = "height: 200px;">
                 <div class="card-body">
                     <h5 class="card-title">Product</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
+                    <p class="card-text">This page to add & delete & edit product.</p>
                     <a href="./product/index.php" class="btn btn-success">Edit Product</a>
+                </div>
+            </div>
+        </div>
+        <div class="col" style = "width: 450px; height: 375px;">
+            <div class="card h-100">
+                <img src="https://image.shutterstock.com/image-vector/rubber-stamp-word-ordered-inside-260nw-315272693.jpg" class="card-img-top" style = "height: 200px;">
+                <div class="card-body">
+                    <h5 class="card-title">Orders</h5>
+                    <p class="card-text">Here you can show all of orders in your website.</p>
+                    <a href="./orders/index.php" class="btn btn-success">show Orders</a>
                 </div>
             </div>
         </div>

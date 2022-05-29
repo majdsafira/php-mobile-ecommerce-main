@@ -56,9 +56,19 @@
                 </li>
                 <li>
                     <a href="http://localhost/php-mobile-ecommerce-main/admin/adminn/index.php">
-                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <i class="fa-light fa-folder-gear fa-2x"></i>
                         <span class="nav-text">
                             Admin
+                        </span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="http://localhost/php-mobile-ecommerce-main/admin/orders/index.php">
+                    <i class="fa fa-bar-chart-o fa-2x"></i>
+
+                        <span class="nav-text">
+                            orders
                         </span>
                     </a>
                 </li>
